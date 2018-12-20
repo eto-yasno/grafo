@@ -11,7 +11,6 @@ $(function(){
 	if(slider.length > 0)
 	{
 	  	slider.on('init', function(event, slick){
-			console.log(slick);
 			slider.find('.slick-dots').prepend('<div class="slider-counter"><span>'+ parseInt(slick.currentSlide + 1, 10) +'</span>/<span>'+ slick.slideCount +'</span></div>');
 		});
 
@@ -53,6 +52,22 @@ $(function(){
 			slidesToShow: 3,
 			slidesToScroll: 1,
 			speed: 500
+	  	});
+	}
+
+	/* Слайдер на странице Обеденные */
+	var slider = $('.main-inner-slider');
+	if(slider.length > 0)
+	{
+		slider.slick({
+			infinite: true,
+			autoplay: true,
+			autoplaySpeed: 4000,
+			slidesToShow: 1,
+			slidesToScroll: 1,
+			dots: true,
+			speed: 500,
+			arrows: false
 	  	});
 	}
 
