@@ -44,6 +44,18 @@ $(function(){
 	  	});
 	}
 
+	/* Слайдер на странице Новости и акции */
+	var slider = $('.slider-promotions');
+	if(slider.length > 0)
+	{
+		slider.slick({
+			infinite: true,
+			slidesToShow: 3,
+			slidesToScroll: 1,
+			speed: 500
+	  	});
+	}
+
 	/* Выводим имя загруженого файла в нашем стилизованом input type="file" */
 	var uploadInput = $("label.upload input[type=file]");
 	var uploadLabel = $("label.upload span");
