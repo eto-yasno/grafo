@@ -147,6 +147,13 @@ h1 {
   margin: 5px 0 20px;
 }
 
+h2 {
+  font-size: 36px;
+  text-transform: uppercase;
+  text-align: center;
+  margin-top: 25px;
+}
+
 h3 {
   font-size: 24px;
 }
@@ -1207,6 +1214,8 @@ label.upload {
   }
 }
 
+/* Медиавыражения для высоты */
+
 /********** Страница Обеденые **********/
 
 .main-inner-slider {
@@ -1260,6 +1269,257 @@ label.upload {
   border-bottom: 2px solid #C4C4C4;
 }
 
+.page .container {
+  padding: 45px 15px;
+  background: url(../img/lines.png) no-repeat 5% bottom / 510px 1000px;
+}
+
+.page:nth-child(odd) {
+  background-color: #373331;
+  color: #fff;
+}
+
+.page:nth-child(odd) .page__full-screen-link {
+  color: #fff;
+}
+
+.page:nth-child(odd) .page__gallery-container,
+.page:nth-child(odd) .page__content {
+  flex-direction: row-reverse;
+}
+
+.page:nth-child(even) {
+  background-color: #fff;
+}
+
+.page__brand-description {
+  position: relative;
+  padding: 0 20px;
+  margin-bottom: 30px;
+}
+
+.page__brand-description:before {
+  content: '';
+  position: absolute;
+  width: 4px;
+  height: 100%;
+  background: #E8EAA1;
+  left: 0;
+  top: 0;
+}
+
+.page__brand-description p {
+  font-size: 26px;
+  line-height: 1.4;
+}
+
+.page__brand-description img {
+  margin-bottom: 10px;
+}
+
+.page__big-img {
+  width: 100%;
+  height: 474px;
+  display: block;
+}
+
+.page__small-img-container {
+  display: flex;
+  align-items: flex-start;
+}
+
+.page__small-img-container img {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.page__small-img-container > div {
+  width: 180px;
+  height: 180px;
+  cursor: pointer;
+  position: relative;
+}
+
+.page__small-img-container > div:not(:last-child) {
+  margin-right: 15px;
+}
+
+.overlay {
+  background: rgba(255, 255, 255, 0.6);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transition: opacity 0.5s;
+}
+
+.overlay:hover {
+  opacity: 0;
+}
+
+.page__gallery-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: -50px;
+}
+
+.page__to-site-link,
+.page__full-screen-link {
+  display: block;
+}
+
+.page__full-screen-link {
+  margin: 35px 0 25px;
+  text-align: left;
+}
+
+.page__to-site-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  font-size: 15px;
+  width: 200px;
+  height: 40px;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: #FFF;
+  border: 1px solid transparent;
+  transition: color 0.5s, background-color 0.5s, border 0.5s;
+}
+
+.page__to-site-link:hover {
+  border: 1px solid rgba(0, 0, 0, 0.7);
+  color: rgba(0, 0, 0, 0.7);
+  background-color: #FFF;
+}
+
+.page__gallery-counter {
+  font-size: 34px;
+  margin-right: 20px;
+}
+
+.page__gallery-counter span:first-child {
+  font-size: 54px;
+}
+
+.dots {
+  display: flex;
+  align-items: flex-start;
+}
+
+.dots li {
+  width: 55px;
+  height: 5px;
+  background: #C4C4C4;
+  cursor: pointer;
+}
+
+.dots li.active {
+  background: #E8EAA1;
+}
+
+.dots li:not(:last-child) {
+  margin-right: 10px;
+}
+
+.page__gallery-dots {
+  display: flex;
+  align-items: center;
+}
+
+.pop-up {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: none;
+}
+
+.pop-up.active {
+  display: flex;
+}
+
+.page__content {
+  margin-top: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.page__content img {
+  width: 49%;
+}
+
+.page__text {
+  width: 48%;
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.page__text p {
+  font-size: 26px;
+}
+
+.page__text p:first-child {
+  font-family: 'Glober-Bold';
+}
+
+.page:nth-child(2) .page__text p:nth-child(2),
+.page:nth-child(2) .page__text p:last-child {
+  font-size: 22px;
+}
+
+footer {
+  height: 122px;
+  padding-top: 60px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.address-footer,
+.logo-footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo-footer {
+  width: 300px;
+  background-color: #F3F3F3;
+  padding: 15px 0;
+}
+
+.address-footer {
+  width: 65%;
+  background-color: #000;
+}
+
+.address-footer p {
+  color: #fff;
+  font-family: 'Glober-Bold';
+  width: 580px;
+  padding: 0 15px;
+}
+
+/* Медиавыражения для ширины */
+
+@media screen and (max-width: 1330px) {
+  .phone {
+    width: 170px;
+  }
+}
+
 @media screen and (max-width: 1289px) {
   nav {
     flex-direction: column;
@@ -1304,6 +1564,26 @@ label.upload {
 @media screen and (max-width: 1200px) {
   .container {
     max-width: 970px;
+  }
+
+  .page:nth-child(odd) .page__gallery-container {
+    flex-direction: column;
+  }
+
+  .page__gallery-container {
+    flex-direction: column;
+    margin-top: 0;
+  }
+
+  .page__text p {
+    flex-direction: column;
+    font-size: 22px;
+  }
+
+  .page:nth-child(2) .page__text p:nth-child(2),
+  .page:nth-child(2) .page__text p:last-child {
+    flex-direction: column;
+    font-size: 18px;
   }
 }
 
@@ -1350,6 +1630,10 @@ label.upload {
     font-size: 36px;
   }
 
+  h2 {
+    font-size: 30px;
+  }
+
   aside {
     display: none;
   }
@@ -1362,6 +1646,33 @@ label.upload {
     font-size: 17px;
   }
 
+  .page:nth-child(odd) .page__content {
+    flex-direction: column;
+  }
+
+  .page__brand-description p {
+    font-size: 22px;
+  }
+
+  .page__big-img {
+    height: auto;
+  }
+
+  .page__content img {
+    align-self: center;
+    margin-bottom: 15px;
+    width: 70%;
+  }
+
+  .page__content {
+    flex-direction: column;
+  }
+
+  .page__text {
+    width: 100%;
+    order: 1;
+  }
+
   .main {
     height: calc(100vh - 223px);
   }
@@ -1371,9 +1682,24 @@ label.upload {
   }
 }
 
+@media screen and (max-width: 590px) {
+  .page__small-img-container > div {
+    width: 90px;
+    height: 90px;
+  }
+
+  .dots li {
+    width: 40px;
+  }
+}
+
 @media screen and (max-width: 576px) {
   h1 {
     font-size: 26px;
+  }
+
+  h2 {
+    font-size: 22px;
   }
 
   .main-menu {
@@ -1414,6 +1740,34 @@ label.upload {
   .main-inner p {
     font-size: 15px;
     width: 100%;
+  }
+
+  .page__brand-description p {
+    font-size: 20px;
+  }
+
+  .page__content img {
+    width: 90%;
+  }
+
+  .page__text p {
+    font-size: 20px;
+  }
+
+  footer {
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+    padding-top: 20px;
+  }
+
+  .address-footer {
+    width: 100%;
+  }
+
+  .address-footer p {
+    width: auto;
+    padding: 15px;
   }
 
   .main {

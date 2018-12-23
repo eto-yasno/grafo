@@ -117,5 +117,31 @@ $(function(){
 	animateDigits('.advantages-stats__item:nth-child(3) span', 30, 94);
 	animateDigits('.advantages-stats__item:nth-child(4) span', 30, 100);
 
+	/* Увеличение миниатюр при клике на них на странице Обеденные */
+	$('.overlay').on('click', function(){
+		$this = $(this);
+		var clickedImg = $this.prev('img');
+		var clickedImgPath = clickedImg.attr('src');
+		var bigImg = $this.parents('.page__gallery').children('img.page__big-img');
+		var bigImgPath = bigImg.attr('src');
+		clickedImg.attr('src', bigImgPath);
+		bigImg.attr('src', clickedImgPath);
+	});
+
+	/* Кнопка "во весь экран" на странице Обеденные */
+	var popUp = $('.pop-up');
+	if(popUp.length > 0)
+	{
+		$('.page__full-screen-link').on('click', function(event){
+			event.preventDefault();
+			var bigImgPath = $(this).parents('.page__gallery').children('img.page__big-img').attr('src');
+			popUp.find('img').attr('src', bigImgPath);
+			popUp.addClass('active');
+		});
+
+		popUp.on('click', function(){
+			popUp.removeClass('active');
+		});
+	}
 
 });
